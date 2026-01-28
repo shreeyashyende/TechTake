@@ -1,0 +1,78 @@
+name: techtake
+description: "TechTake - Your everyday take in tech. A vocabulary learning app for technical terms."
+publish_to: 'none'
+version: 1.0.1+1
+
+environment:
+  sdk: '>=3.2.3 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # State Management
+  flutter_riverpod: ^2.5.1
+
+  # Database
+  sqflite: ^2.3.2
+  path: any
+
+  # Storage
+  shared_preferences: ^2.2.3
+
+  # UI/Design
+  google_fonts: ^5.1.0
+  lucide_icons: ^0.257.0
+  flutter_animate: ^4.3.0
+
+  # Text-to-Speech
+  flutter_tts: ^4.0.2
+
+  # Utilities
+  intl: ^0.19.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+  flutter_native_splash: ^2.3.10
+  flutter_launcher_icons: ^0.13.1
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/
+
+# Flutter Native Splash configuration
+flutter_native_splash:
+  color: "#000000"
+  image: assets/splash.png
+  color_dark: "#000000"
+  image_dark: assets/splash.png
+
+  android_12:
+    color: "#000000"
+    icon_background_color: "#000000"
+    image: assets/logo.png
+    branding: assets/splash.png
+    color_dark: "#000000"
+    icon_background_color_dark: "#000000"
+    image_dark: assets/logo.png
+    branding_dark: assets/splash.png
+
+  ios: true
+  android: true
+  fullscreen: true
+
+# Flutter Launcher Icons configuration
+flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: "assets/logo.png"
+  min_sdk_android: 21
+  remove_alpha_ios: true
+
+  # Android adaptive icon - logo on black background
+  adaptive_icon_background: "#000000"
+  adaptive_icon_foreground: "assets/logo.png"
